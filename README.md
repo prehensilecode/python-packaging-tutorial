@@ -14,3 +14,4 @@ Added features:
  - `poetry`
 2. `poetry build`
 3. `python3 -m pip install -U ./dist/foobar-0.0.X-py3-none-any.whl`
+4. Lock requirements: `poetry lock` ➡ generates `poetry.lock` file

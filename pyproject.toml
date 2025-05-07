@@ -15,7 +15,6 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
-packages = [{include = "foobar"}]
 requires-python = ">=3.9"
 
 [project.urls]
@@ -26,6 +25,11 @@ documentation = "https://github.com/prehensilecode/python-packaging-tutorial"
 
 [project.scripts]
 foobar = "foobar.get_rate:main"
+
+[tool.poetry]
+packages = [
+    { include = "foobar"},
+]
 
 [tool.project.dependencies]
 python = ">=3.9,<4.0"

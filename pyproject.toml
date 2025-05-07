@@ -2,15 +2,13 @@
 requires = [ "poetry-core>=1.0.0" ]
 build-backend = "poetry.core.masonry.api"
 
-[tool.poetry]
+[project]
 name = "foobar"
 version = "0.0.9"
 authors = [
-   "David Chin <prehensilecode@users.noreply.github.com>",
+   { name = "David Chin", email = "prehensilecode@users.noreply.github.com"},
 ]
 description = "A small example package"
-homepage = "https://github.com/prehensilecode/python-packaging-tutorial"
-repository = "https://github.com/prehensilecode/python-packaging-tutorial/"
 readme = "README.md"
 classifiers = [
     "Programming Language :: Python :: 3",
@@ -18,10 +16,16 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 packages = [{include = "foobar"}]
+requires-python = ">=3.9"
 
-[tool.poetry.dependencies]
-python = ">=3.9"
+[project.urls]
+homepage = "https://github.com/prehensilecode/python-packaging-tutorial"
+repository = "https://github.com/prehensilecode/python-packaging-tutorial"
+documentation = "https://github.com/prehensilecode/python-packaging-tutorial"
+"Bug Tracker" = "https://github.com/prehensilecode/python-packaging-tutorial/issues"
 
-[tool.poetry.scripts]
+[project.scripts]
 foobar = "foobar.get_rate:main"
 
+[tool.project.dependencies]
+python = ">=3.9,<4.0"
